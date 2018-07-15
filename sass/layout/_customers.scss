@@ -1,0 +1,46 @@
+.customers{
+    width:100%;
+    height:80vh;
+    position:relative;
+    margin:0 auto;
+    &--top{
+        position:relative;   
+    }
+    
+    &__header{
+        @include headerStyle;
+        letter-spacing: 3px;
+    }
+    &__logos{
+        margin-left: 9rem;
+        margin-right: 9rem;
+        padding:4rem 4rem;
+        display:block;
+        position: absolute;
+        top:10rem;
+        left:0; 
+       
+    }
+    &__img{
+        margin: 1.5rem 3.5rem;
+         &:hover{
+            box-shadow:6px 6px 7px 0 rgba(0,0,0,0.75);
+        }
+    }
+}
+
+.video{
+    position:absolute;
+    top:-12rem;
+    left:0;
+    height:100vh;
+    width:100%; 
+    z-index:-100;
+    overflow: hidden;
+    
+    &--content{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;  
+    }
+}

@@ -1,0 +1,120 @@
+.contactPopup{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(#000, .8);
+    z-index: 3000;
+    opacity:0;
+    visibility:hidden;
+    transition: all .5s;
+    transition-timing-function: ease-in-out;
+    
+    &:target{
+        opacity:1;
+        visibility:visible;
+    }
+    
+    &__box{
+        @include center;
+        width:60%;
+        height:50rem;
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0 2rem 4rem rgba(#000, .8);
+        background-image: linear-gradient(90deg, rgba(#fff, 1),
+        rgba(#fff, 0.5)), url(../img/popup.jpg);
+        background-size: cover;
+        overflow:hidden;
+        position:relative;
+    }
+}
+
+.popup__close{
+    
+    position:absolute;
+    display:inline-block;
+    padding:0;
+    width:4rem;
+    height:4rem;
+    top:4rem;
+    right:4rem;
+    text-decoration: none;
+    color:black;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 4rem;
+    transition: all .3s;
+    text-align: center;
+    line-height: 4rem;
+    transition: all .1s;
+    &:active{
+        transform: translateY(1rem);
+    }
+    
+    &:hover{
+        color:$color-primary-dark;
+        box-shadow: 6px 6px 7px 0 rgba(0,0,0,0.75);
+    }
+}
+.contact__header{
+    @include headerStyle;
+    line-height:5rem;
+    margin-top:4rem;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left:4rem;
+}
+.contact__form{
+    width:40%;
+    padding-left:4rem;
+}
+
+.label{
+    font-family: inherit;
+    font-size:1.3rem;
+    color:$color-primary-dark;
+    padding-left:2rem;
+}
+
+.input{
+    padding:1rem 1.5rem;
+    font-size:1.6rem;
+    border-radius: .3rem;
+    border: none;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+    width:100%;
+    &__group{
+        margin:1.5rem;
+    }
+    &:focus{
+        outline:none;
+        box-shadow:6px 6px 7px 0 rgba(0,0,0,0.75);
+        border-bottom: 2px solid $color-primary-dark;
+    }
+    &__message{
+        height:5rem;
+    }
+}
+
+.request__btn{
+    margin-left:3rem;
+    padding:1rem;
+    text-decoration: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    line-height:2px;
+    background-color: $color-primary-dark;
+    color:white;
+    transition: all .1s;
+     &:hover{
+        opacity:.7;
+    }
+    &:active{
+        transform: translateY(.5rem);
+    }
+   
+}

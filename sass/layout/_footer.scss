@@ -1,0 +1,75 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    color:$color-primary-light;
+    background-color: black;
+    width:100%;
+    height:50vh;
+    padding: 2rem;
+    position:relative;
+    &__logo{
+        grid-column: 1/2;
+    }
+    &__contsctUs{
+        grid-column: 2/3;
+    }
+    &__details{
+        grid-column: 3/4;
+    }
+}
+.logo{
+    position:absolute;
+    vertical-align: middle;
+    left:15rem;
+    top:10rem;
+    width: 13rem;
+}
+
+.contactUs{
+     &__header{
+        text-transform: uppercase;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        text-align: center;
+        padding:0;
+    }
+    &__details{
+        font-size: 1.6rem;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        padding: 2rem;
+    }
+    &__button{
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: #4286f4;
+        font-weight: 700;
+        color:white;
+        border-radius: 3px;
+        font-size:2.5rem;
+        padding:1rem;
+        letter-spacing: 1px;
+        text-align: center;
+        display: block;
+        margin: 4rem 8rem;
+        transition: all .1s;
+    &:hover{
+        opacity:.8;
+    }
+    &:active{
+        transform: translateY(1rem);
+    }
+    }
+}
+  
+.details__details{
+        padding:3rem;
+        padding-right:7rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        text-align: center;
+        letter-spacing: 1px;
+        }

@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    background-image: url(../img/background.png);
+    position: relative;
+}
+
+$color-primary-light: #89fffd;
+$color-primary-dark: #021B79;
+
+@mixin center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+@mixin headerStyle{
+    line-height: 15rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color:#021B79;
+}
+
+@keyframes dropDown{
+     0%{
+        opacity:0;
+        transform:translate(-50%, -300%);
+    }
+    100%{
+        opacity:.5;
+    }
+}
+
+
+@keyframes moveFromLeft{
+    0%{
+        transform:translate(-220%, -50%);
+    }
+    70%{
+        transform:translate(10%, 0);
+    }
+}
+
+@keyframes moveFromRight{
+    0%{
+        transform:translate(220%, -50%);
+    }
+     70%{
+        transform:translate(-10%, 0);
+    }
+}
+
+.contact__btn{
+    position: fixed;
+    top:3.5rem;
+    right:3.5rem;
+    z-index: 2000;
+    text-transform: uppercase;
+    color:$color-primary-dark;
+    background-color: white;
+    border-radius: 1rem;
+    font-size: 2rem;
+    padding:1rem 2rem;
+    box-shadow: 4px 4px 5px 3px rgba(0,0,0,0.75);
+    text-decoration: none;
+    transition: all .3s;
+    &:hover{
+        opacity:.8;
+    }
+    &:active{
+        transform: translateY(1rem);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

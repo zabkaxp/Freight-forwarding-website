@@ -1,0 +1,14 @@
+{
+  "name": "lorries",
+  "version": "1.0.0",
+  "description": "freight forwarding",
+  "main": "script.js",
+  "scripts": {
+      "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Marta Wojno",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
